@@ -101,29 +101,17 @@ docker run -d --rm --name=infra1 infracloud1:latest absh
 docker run -d --rm --name=infra1 infracloud1:latest bash
 ls -lrt
 clear
-docker ps
-docker ps
-
-docker ps
-docker ps
 docker ps -a
 lcear
 clear
 ls -lrt
 docker build -t test .
 docker run -d -it --name=infra2 test:latest
-dockre ps
-docker ps
-docker ps
-docker ps
-docker ps
-docker ps
 clear
 docker run -d -it --name=infra2 test:latest bash
 docker rm -f $(docker ps -a -q)
 docker run -d -it --name=infra2 test:latest bash
 docker ps
-docker -exec -t infra2
 docker -exec -it infra2
 clear
 docker ps
@@ -134,8 +122,6 @@ curl http://localhost:9300
 docker exec -it infra2 bash
 docker rm -f $(docker ps -a -q)
 ls -lrt
-vim solution
-vim dockerfile 
 vim dockerfile 
 cd solution/
 ls -lrt
