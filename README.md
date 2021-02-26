@@ -9,7 +9,6 @@ clear
 docker images
 docker run -d -it --name=infracloud1 infracloudio/csvserver
 dockre ps
-docker ps
 docker run -d -it --name=infracloud1 infracloudio/csvserver bash
 clear
 docker rm -f $(docker ps -a -q )
@@ -63,7 +62,6 @@ cd
 ls -rl
 ls -rlt
 cd .docker/
-l s-lrt
 ls -rlt
 mv csvserver ..//
 cd ..
@@ -97,12 +95,10 @@ docker run -d --rm --name=infra1 infracloud1:latest
 dcoker ps
 dokcre ps
 docker ps
-docker run -d --rm --name=infra1 infracloud1:latest absh
 docker run -d --rm --name=infra1 infracloud1:latest bash
 ls -lrt
 clear
 docker ps -a
-lcear
 clear
 ls -lrt
 docker build -t test .
@@ -126,6 +122,5 @@ vim dockerfile
 cd solution/
 ls -lrt
 touch README.md
-l s-lrt
 ls -lrt
 history >> README.md
