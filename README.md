@@ -63,7 +63,7 @@ docker build . -t infracloud
 #
 ls -lrt
 #cd csvserver/
-ll
+#
 ls -lrt
 #
 mv *.sh solution/
@@ -72,36 +72,44 @@ mv inputFile10 solution/
 cd solution/
 #
 docker build . -t infracloud1
+#
 docker run -d --rm --name=infra1 infracloud1:latest
-dcoker ps
-dokcre ps
+#
 docker ps
+#
 docker run -d --rm --name=infra1 infracloud1:latest bash
 ls -lrt
-clear
+#
 docker ps -a
-clear
-ls -lrt
+#
 docker build -t test .
+#
 docker run -d -it --name=infra2 test:latest
-clear
+#
 docker run -d -it --name=infra2 test:latest bash
+#
 docker rm -f $(docker ps -a -q)
+#
 docker run -d -it --name=infra2 test:latest bash
+#
 docker ps
+#
 docker -exec -it infra2
-clear
-docker ps
+#docker ps
+#
 docker exec -it infra2 bash
+#
 docker ps
 curl http://localhost:9300
-curl http://localhost:9300
+#
 docker exec -it infra2 bash
+#
 docker rm -f $(docker ps -a -q)
 ls -lrt
+#
 vim dockerfile 
 cd solution/
 ls -lrt
 touch README.md
-ls -lrt
+#
 history >> README.md
