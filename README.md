@@ -22,7 +22,6 @@ docker run -d -it --name=infracloud1 infracloudio/csvserver
 dockre ps
 #
 docker run -d -it --name=infracloud1 infracloudio/csvserver bash
-
 #clear
 #
 docker rm -f $(docker ps -a -q )
@@ -30,7 +29,7 @@ docker rm -f $(docker ps -a -q )
 docker run -d -it --name=infracloud1 infracloudio/csvserver bash
 #
 docker ps
-
+#
 #touch gencsv.sh
 #
 vim egnscv.sh
@@ -38,75 +37,40 @@ vim egnscv.sh
 ls -lrt
 #
 cat gencsv.sh 
-clear
+#
 ls -lrt
-rm -rf egnscv.sh 
+# 
 sh gencsv.sh 
+#vim gencsv.sh 
+# 
 vim gencsv.sh 
-vim gencsv.sh 
+#
 sh gencsv.sh 
+#
+sh gencsv.sh 
+#
 ls -lrt
-act inputFile 
-cat inputFile 
-vim gencsv.sh 
-sh gencsv.sh 
-ls -rlt
-cat gencsv.sh 
-cat inputFile 
-vim gencsv.sh 
-sh gencsv.sh 
-cat inputFile 
-vim gencsv.sh 
-vim gencsv.sh 
-sh gencsv.sh 
-cat inputFile 
-vim gencsv.sh 
-clear
-mv inputFile inputFile10
-sh gencsv.sh 
-l s-rlt
-ls -lrt
+#
 git clone https://github.com/infracloudio/csvserver.git
-l s-rlt
+#
 ls -lrt
-mv gencsv.sh csvserver/
-mv inputFile csvserver/
-mv inputFile10 csvserver/
+#
 sudo vim dockerfile
-ls -lrt
-pwd
-cd
-ls -rl
-ls -rlt
-cd .docker/
-ls -rlt
-mv csvserver ..//
-cd ..
-clera
-clear
-ls -lrt
+#
 vim dockerfile
+#
 docker build . -t infracloud
+#
 ls -lrt
-cd csvserver/
+#cd csvserver/
 ll
 ls -lrt
-mv inputFile10 solution/
-mv *.hs solution/
+#
 mv *.sh solution/
-mv inputFile01 solution/
 mv inputFile10 solution/
-mv input* solution/
+#
 cd solution/
-ls -rl
-clear
-cd ..
-ls -lrt
-cd
-ls -lrt
-mv dockerfile csvserver/
-cd csvserver/
-ls -lrt
+#
 docker build . -t infracloud1
 docker run -d --rm --name=infra1 infracloud1:latest
 dcoker ps
