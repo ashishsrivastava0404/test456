@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -f inputFile
 touch inputFile
 MAXCOUNT=10000
 count=0
