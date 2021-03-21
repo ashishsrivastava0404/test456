@@ -1,25 +1,42 @@
+##
 clear
+##
 docker pull infracloudio/csvserver:latest
+##
 docker pull prom/prometheus:v2.22.0
+##
 ls -lrt
+##
 ls -lah
+#
 cd .docker
+#
 ls -lrt
+#
 clear
+#
 docker images
+#
 docker run -d -it --name=infracloud1 infracloudio/csvserver
+#
 dockre ps
+#
 docker run -d -it --name=infracloud1 infracloudio/csvserver bash
-clear
+
+#clear
+#
 docker rm -f $(docker ps -a -q )
+#
 docker run -d -it --name=infracloud1 infracloudio/csvserver bash
+#
 docker ps
-touch gencsv.sh
+
+#touch gencsv.sh
+#
 vim egnscv.sh
+#
 ls -lrt
-cat egnscv.sh 
-cat gencsv.sh 
-cat egnscv.sh >> gencsv.sh 
+#
 cat gencsv.sh 
 clear
 ls -lrt
